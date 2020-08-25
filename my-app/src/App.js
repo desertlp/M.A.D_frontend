@@ -1,26 +1,63 @@
 import React from 'react';
-import logo from './logo.svg';
+import { withRouter } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
+import Routes from './config/routes';
+import NavBar from './components/NavBar/NavBar';
+import setAuthHeader from './utils/setAuthHeader';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    currentUser: localStorage.getItem('token'),
+  };
+
+  componentDidMount() {
+    const token = localStorage.getItem('token');
+    if (token) {
+      // Set Auth Header
+      setAuthHeader(token);
+      // Decode Token
+      const decodedToken = jwt_decode(token);
+      // Set State
+      this.setState({currentUser: decodedToken.id})
+    }
+  }
+
+  setCurrentUser = (token) => {
+    // Store Token
+    localStorage.setItem('token', token);
+    // Set Auth Header
+    setAuthHeader(token);
+    // Decode Token
+    const decodedToken = jwt_decode(token);
+    // Set State
+    this.setState({currentUser: decodedToken.id})
+  };
+
+  logout = () => {
+    // Remove Token
+    localStorage.removeItem('token');
+    // Remove Auth Header
+    setAuthHeader();
+    // Set State
+    this.setState({currentUser: ''});
+    // Redirect
+    this.props.history.push('/login');
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar currentUser={this.state.currentUser} logout={this.logout} />
+        <div className="container">
+          <Routes currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} />
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
-export default App;
+
+// withRouter = Higher Order Component. It's a function that returns a function that returns a component loaded up with new info
+export default withRouter(App);
+// export default App;
