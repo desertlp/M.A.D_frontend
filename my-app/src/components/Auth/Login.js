@@ -23,7 +23,8 @@ class Login extends Component {
       .then((res) => {
         console.log(res);
         this.props.setCurrentUser(res.data.token);
-        this.props.history.push('/videos'); // want this to go to reel or videos? 
+        this.props.history.push('/'); // want this to go to reel 
+      
       })
       .catch((err) => {
         console.log(err.response.status);

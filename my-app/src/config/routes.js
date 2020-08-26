@@ -3,7 +3,9 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Static 
 import Home from '../pages/Home/Home';
-
+import ReelContainer from '../pages/Reel/ReelContainer';
+import Contact from '../pages/Contact/Contact';
+import Bio from '../pages/Bio/Bio';
 // About 
 
 // Videos
@@ -34,6 +36,12 @@ export default ({ currentUser, setCurrentUser }) => (
     
     <Route exact path='/' component={Home} />
     
+    <Route path='/reel'component={ReelContainer}/>
+    {/* <Route path='user/user:id/reel' render={() => currentUser ? <ReelContainer /> : <Redirect to='/login' /> }/> */}
+
+    <Route path='/bio'component={Bio}/>
+    <Route path='/contact'component={Contact}/>
+    
     <Route path='/video/new' render={() => currentUser ? <NewVideoContainer /> : <Redirect to='/login' /> }/>
     <Route path='/video/:id' component={VideoContainer} />
     <Route path='/video' component={VideoListContainer} />
@@ -41,6 +49,8 @@ export default ({ currentUser, setCurrentUser }) => (
     <Route path='/bts/new' render={() => currentUser ? <NewBTSContainer /> : <Redirect to='/login' /> }/>
     <Route path='/bts/:id' component={BTSContainer} />
     <Route path='/bts' component={BTSListContainer} />
+
+    {/* <Route path='/profile/:id/edit' component={ProfileContainer} /> */}
 
     <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} />} />
     <Route path='/register' component={Register} />

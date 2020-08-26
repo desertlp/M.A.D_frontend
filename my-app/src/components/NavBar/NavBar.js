@@ -14,9 +14,14 @@ function NavBar({ currentUser, logout }) {
         <ul className="nav-list">
 
           <li className='nav-item'>
-            {/* Don't forget the 'exact' prop for home nav link */}
-            <NavLink className='nav-link' exact to='/'>Home</NavLink>
+            <NavLink className='nav-link' exact to='/reel'>Reel</NavLink>
           </li>
+
+          <li className='nav-item'>
+            {/* Don't forget the 'exact' prop for home nav link */}
+            <NavLink className='nav-link' exact to='/bio'>Bio</NavLink>
+          </li>
+
 
           <li className='nav-item'>
             <NavLink className='nav-link' exact to='/video'>Videos</NavLink>
@@ -25,7 +30,7 @@ function NavBar({ currentUser, logout }) {
           <li className='nav-item'>
             <NavLink className='nav-link' exact to='/bts'>BTS</NavLink>
           </li>
-          
+
           <li className='nav-item'>
             <NavLink className='nav-link' to='/video/new'>Add Video</NavLink>
           </li>
@@ -33,6 +38,12 @@ function NavBar({ currentUser, logout }) {
           <li className='nav-item'>
             <NavLink className='nav-link' to='/bts/new'>Add BTS</NavLink>
           </li>
+
+          <li className='nav-item'>
+            {/* Don't forget the 'exact' prop for home nav link */}
+            <NavLink className='nav-link' exact to='/contact'>Contact</NavLink>
+          </li>
+
 
           {/* IF LOGGED IN */}
           {/* NEED TO LOCK DOWN THE CRUD PATHS FOR VIDEO/BTS/PROFILE if you are not user that created the page */}
