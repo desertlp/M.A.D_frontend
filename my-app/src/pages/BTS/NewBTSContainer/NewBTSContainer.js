@@ -8,8 +8,8 @@ class NewBTSContainer extends React.Component {
     photoUrl: '',
   };
 
-  handleChage = (event) => {
-    // console.log(event.target.id);
+  handleChange = (event) => {
+    console.log(event.target.id);
     if (event.target.value === 'on') {
       event.target.value = true;
     }
@@ -36,12 +36,12 @@ class NewBTSContainer extends React.Component {
 
           <div>
             <label htmlFor="">Photo Url</label>
-            <input onInput={this.handleChage} type="text" name="photoUrl" />
+            <input onInput={this.handleChange} type="text" name="photoUrl" />
           </div>
 
           <div>
             <label htmlFor="">Description</label>
-            <input onInput={this.handleChage} type="text" name="description" />
+            <input onInput={this.handleChange} type="text" name="description" />
           
           </div>
 

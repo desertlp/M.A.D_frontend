@@ -4,7 +4,7 @@ import Video from '../Video/Video';
 import './VideoList.css';
 
 function VideoList(props) {
-  const videoList = props.videos.map((videoObj) => {
+  const videoList = props.video.map((videoObj) => {
     return <Video key={videoObj._id} game={videoObj} list={true} />
   });
 

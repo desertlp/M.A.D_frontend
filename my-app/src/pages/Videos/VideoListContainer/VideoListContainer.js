@@ -4,7 +4,7 @@ import VideoModel from '../../../models/video';
 
 class VideoListContainer extends React.Component {
   state = {
-    videos: [],
+    video: [],
   };
 
   componentDidMount() {
@@ -18,7 +18,7 @@ class VideoListContainer extends React.Component {
   }
 
   render() {
-    return <VideoList videos={this.state.videos} />;
+    return <VideoList video={this.state.video} />;
   }
 }
 

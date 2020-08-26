@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from "../../utils/consts"
+
 // use token to access local storage for axios/fetch and it will talk to browser and then pass to backend
 
 class Login extends Component {
@@ -17,7 +19,7 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
+    axios.post(`${API_URL}/auth/login`, this.state)
       .then((res) => {
         console.log(res);
         this.props.setCurrentUser(res.data.token);

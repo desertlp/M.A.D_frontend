@@ -10,7 +10,7 @@ function BTSList(props) {
 
   return (
     <div className="bts-container">
-      {BTSList}
+      {btsList}
     </div>
   );
 }

@@ -15,7 +15,7 @@ class BTSContainer extends React.Component {
         this.setState({bts: result});
       })
       .catch((err) => console.log(err))
-  }
+  };
 
   render() {
     console.log(this.props);

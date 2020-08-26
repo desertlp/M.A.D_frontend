@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import './BTS.css';
 
 function BTS (props) {
-  const { bts, list } = props;
+  const { bts } = props;
 
   return (
-    <Link to={`/bts/${bts._id}`}>
+    <Link to={`/bts/${BTS._id}`}>
       <div className="bts-card">
         <section className="image-wrapper">
-          <img src={bts.photoUrl} alt={bts.description} height="100" />
+          <img src={BTS.photoUrl} alt="behind the scenes" height="100" />
         </section>
         <section className="content-wrapper">
-          <h4>{bts.description}</h4>
+          <h4>{BTS.description}</h4>
         </section>
       </div>
     </Link>

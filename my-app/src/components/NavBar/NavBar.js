@@ -19,7 +19,7 @@ function NavBar({ currentUser, logout }) {
           </li>
 
           <li className='nav-item'>
-            <NavLink className='nav-link' exact to='/videos'>Videos</NavLink>
+            <NavLink className='nav-link' exact to='/video'>Videos</NavLink>
           </li>
 
           <li className='nav-item'>

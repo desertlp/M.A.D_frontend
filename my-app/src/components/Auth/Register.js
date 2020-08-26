@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; // higher order 
 import axios from 'axios'; // npm install axios
+import { API_URL } from "../../utils/consts"
 
 class Register extends Component {
   state = {
@@ -16,7 +17,7 @@ class Register extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP_API}/auth/register`, this.state)
+    axios.post(`${API_URL}/auth/register`, this.state)
       .then((res) => {
         console.log(res);
         this.props.history.push('/login');
@@ -25,20 +26,20 @@ class Register extends Component {
         console.log(err.response.status);
         console.log(err.response.data);
         console.log(err.response.data.message);
-      });
-  }
+      })
+    };
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Email</label>
-          <input onChange={this.handleChange} type="email" id="email" name="email" value={this.state.email} />
+          <input onChange={this.handleChange} type="email" id="email" name="email"/>
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          <input onChange={this.handleChange} type="password" id="password" name="password" value={this.state.password} />
+          <input onChange={this.handleChange} type="password" id="password" name="password"/>
         </div>
         <button className="btn btn-primary float-right" type="submit">Register</button>
       </form>

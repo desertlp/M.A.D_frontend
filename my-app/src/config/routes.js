@@ -19,18 +19,23 @@ import NewBTSContainer from '../pages/BTS/NewBTSContainer/NewBTSContainer';
 import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
 
+
+
+
+
+
 export default ({ currentUser, setCurrentUser }) => (
+// export default ({setCurrentUser }) => (
   
   <Switch>
+    
     <Route exact path='/' component={Home} />
     
-    {/* <Route path='/video/new' render={() => currentUser ? <NewVideoContainer /> : <Redirect to='/login' /> }/> */}
-    <Route path='/video/new' render={NewVideoContainer}/>
+    <Route path='/video/new' render={() => currentUser ? <NewVideoContainer /> : <Redirect to='/login' /> }/>
     <Route path='/video/:id' component={VideoContainer} />
-    <Route path='/videos' component={VideoListContainer} />
+    <Route path='/video' component={VideoListContainer} />
     
-    {/* <Route path='/bts/new' render={() => currentUser ? <NewBTSContainer /> : <Redirect to='/login' /> }/> */}
-    <Route path='/bts/new' render={NewBTSContainer}/>
+    <Route path='/bts/new' render={() => currentUser ? <NewBTSContainer /> : <Redirect to='/login' /> }/>
     <Route path='/bts/:id' component={BTSContainer} />
     <Route path='/bts' component={BTSListContainer} />
 
@@ -39,3 +44,6 @@ export default ({ currentUser, setCurrentUser }) => (
   </Switch>
   
 );
+
+
+
