@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
 nav {
-  background-color:black;
-  color: floralwhite;
+  background-color:white;
   margin-bottom: 40px;
+  font-family: 'Neucha', cursive;
 }
 
 nav .container {
@@ -10,21 +12,14 @@ nav .container {
   justify-content: space-between;
 }
 
-.logo {
-  color: floralwhite;
-  text-decoration: none;
-}
-
-.logo h1 {
-  font-size: 30px;
-  padding: 0;
-  margin: 0;
-  color: floralwhite;
+.logo img {
+  width: 15vh;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
+  align-self: center;
   margin: 0;
 }
 
@@ -35,12 +30,13 @@ nav .container {
 
 .nav-link {
   display: block;
-  color: #fff;
+  color: black;
   padding: 10px;
   text-decoration: none;
+  transition: 0.1 linear;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background-color: #004D99;
+  transform: scale(1.5);
 }

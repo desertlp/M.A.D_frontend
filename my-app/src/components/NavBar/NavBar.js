@@ -8,7 +8,7 @@ function NavBar({ currentUser, logout }) {
       <div className="container">
 
         <NavLink className="logo" to='/'>
-          <h1>M.A.D</h1>
+          <img src={require('./logo.jpg')}></img>
         </NavLink>
 
         <ul className="nav-list">
@@ -25,7 +25,7 @@ function NavBar({ currentUser, logout }) {
           <li className='nav-item'>
             <NavLink className='nav-link' exact to='/bts'>BTS</NavLink>
           </li>
-
+          
           <li className='nav-item'>
             <NavLink className='nav-link' to='/video/new'>Add Video</NavLink>
           </li>
@@ -51,9 +51,6 @@ function NavBar({ currentUser, logout }) {
             <>
               <li className='nav-item'>
                 <NavLink className='nav-link' to='/login'>Login</NavLink>
-              </li>
-              <li className='nav-item'>
-                <NavLink className='nav-link' to='/register'>Register</NavLink>
               </li>
             </>
           )}

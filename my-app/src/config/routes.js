@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Static 
 import Home from '../pages/Home/Home';
+
 // About 
 
 // Videos
@@ -18,6 +19,8 @@ import NewBTSContainer from '../pages/BTS/NewBTSContainer/NewBTSContainer';
 // Authorization 
 import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
+
+
 
 
 
