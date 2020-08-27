@@ -5,26 +5,22 @@ h4 {
   font-size: 25px;
 }
 
-.bio-cards-wrapper {
+.bio-pic-wrapper {
   margin-left: 80px;
   background-color: black;
   display: flex;
   width: 80%;
+  
 }
 
-.bio-card {
+.bio-pic {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 600px;
   width: 100%;
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 16px;
   padding: 20px;
+  /* margin: 30px; */
 }
 
-.bio-content-wrapper {
-  margin-top: -90px;
-  text-align: justify;
-}

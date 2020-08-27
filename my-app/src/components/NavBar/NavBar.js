@@ -32,10 +32,6 @@ function NavBar({ currentUser, logout }) {
           </li>
 
           <li className='nav-item'>
-            <NavLink className='nav-link' to='/video/new'>Add Video</NavLink>
-          </li>
-
-          <li className='nav-item'>
             <NavLink className='nav-link' to='/bts/new'>Add BTS</NavLink>
           </li>
 

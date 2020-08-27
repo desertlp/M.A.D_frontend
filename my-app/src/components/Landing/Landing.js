@@ -16,7 +16,7 @@ function Landing() {
         <div className="landing-card">
           <section className="content-wrapper">
             <h4>Build</h4>
-            <p>Set designers and indursty professionals can create and manage a flawless portfolio in just inues. Share your portfolio link directly frmo the site to potential clients.</p>
+            <p>Set designers and industry professionals can create and manage a flawless portfolio in just inues. Share your portfolio link directly frmo the site to potential clients.</p>
           </section>
         </div>
 

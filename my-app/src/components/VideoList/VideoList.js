@@ -7,7 +7,7 @@ function VideoList(props) {
     // could do de-structuring instead if this isnt going to work 
     // honestly where does props come from
   const videoList = props.video.map((videoObj) => {
-    return <Video key={videoObj._id} game={videoObj} list={true} />
+    return <Video key={videoObj._id} video={videoObj} list={true} />
   });
 
   return (
