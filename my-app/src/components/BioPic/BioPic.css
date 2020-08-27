@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+h4 {
+  font-family: 'Neucha', cursive;
+  font-size: 25px;
+}
+
+.bio-pic-wrapper {
+  margin-left: 80px;
+  background-color: black;
+  display: flex;
+  width: 80%;
+  
+}
+
+.bio-pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  /* margin: 30px; */
+}
+

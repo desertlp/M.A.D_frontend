@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+h4 {
+  font-family: 'Neucha', cursive;
+  font-size: 25px;
+}
+.container {
+  margin-right: 20px;
+}
+
+.general-page {
+
+  margin-right: 40px;
+  border: solid .5px grey;
+  Box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-around;
+  width: 100%;
+  height: 60vh;
+  }

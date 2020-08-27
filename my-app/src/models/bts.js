@@ -27,4 +27,4 @@ class BTSModel {
 
 
 
-export default BTSModel
+export default BTSModel;

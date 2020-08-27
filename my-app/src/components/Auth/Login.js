@@ -22,8 +22,11 @@ class Login extends Component {
     axios.post(`${API_URL}/auth/login`, this.state)
       .then((res) => {
         console.log(res);
-        this.props.setCurrentUser(res.data.token);
-        this.props.history.push('/videos'); // want this to go to reel or videos? 
+        // this.props.setCurrentUser(res.data.token);
+        localStorage.setItem('token', res.data.token)
+        localStorage.setItem('id', res.data.id)
+        this.props.history.push('/'); // want this to go to reel 
+      
       })
       .catch((err) => {
         console.log(err.response.status);
