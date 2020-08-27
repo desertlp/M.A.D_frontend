@@ -1,6 +1,5 @@
 import React from 'react';
 import VideoList from '../../../components/VideoList/VideoList';
-import NewVideoContainer from '../NewVideoContainer/NewVideoContainer';
 import UserModel from '../../../models/user';
 
 class VideoListContainer extends React.Component {

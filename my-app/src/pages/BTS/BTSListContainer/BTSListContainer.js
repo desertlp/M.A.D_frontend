@@ -1,6 +1,6 @@
 import React from 'react';
 import BTSList from '../../../components/BTSList/BTSList';
-import BTSModel from '../../../models/bts';
+import UserModel from '../../../models/user';
 
 class BTSListContainer extends React.Component {
   state = {
@@ -8,11 +8,12 @@ class BTSListContainer extends React.Component {
   };
 
   componentDidMount() {
-    // Get All BTSs
-    BTSModel.getAllBTS()
+    // Get All BTS Photos
+    const userId = localStorage.getItem('id');
+    UserModel.getUserById(userId)
       .then((result) => {
-        // console.log(result);
-        this.setState({bts: result});
+        console.log(result);
+        this.setState({ bts: result.bts });
       })
       .catch((err) => console.log(err))
   }

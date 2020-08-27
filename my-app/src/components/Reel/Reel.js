@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReelMedia from '../ReelMedia/ReelMedia';
 
 import './Reel.css';
 
@@ -21,3 +22,4 @@ function Reel (props) {
 }
 
 export default Reel;
+

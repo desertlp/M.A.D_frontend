@@ -19,7 +19,7 @@ import VideoIndex from '../pages/Videos/VideoIndex';
 
 
 // BTS Photo Gallery 
-import BTSListContainer from '../pages/BTS/BTSListContainer/BTSListContainer';
+import BTSIndex from '../pages/BTS/BTSIndex';
 import BTSContainer from '../pages/BTS/BTSContainer/BTSContainer';
 import NewBTSContainer from '../pages/BTS/NewBTSContainer/NewBTSContainer';
 
@@ -49,7 +49,7 @@ export default ({ currentUser, setCurrentUser }) => (
     
     <Route path='/bts/new' render={() => currentUser ? <NewBTSContainer /> : <Redirect to='/login' /> }/>
     <Route path='/bts/:id' component={BTSContainer} />
-    <Route path='/bts' component={BTSListContainer} />
+    <Route path='/bts' component={BTSIndex} />
 
     {/* <Route path='/profile/:id/edit' component={ProfileContainer} /> */}
 

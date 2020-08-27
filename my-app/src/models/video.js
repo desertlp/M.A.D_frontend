@@ -27,4 +27,4 @@ class VideoModel {
 
 
 
-export default VideoModel
+export default VideoModel;
