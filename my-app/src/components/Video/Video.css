@@ -10,6 +10,7 @@
   margin-bottom: 30px;
   color: white;
   transition: 0.1s linear;
+  text-decoration: none;
 }
 
 .video-card:hover {
@@ -34,4 +35,6 @@
 .content-wrapper {
   padding: 0 20px;
   text-align: center;
+  text-decoration: none;
+  color: white;
 }

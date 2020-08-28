@@ -24,7 +24,9 @@ class ReelContainer extends React.Component {
   render() {
     return (
       <div className="reel-container">
-        <ReelMedia/>
+        <div className="reel-media-video">
+          <ReelMedia/>
+        </div>
         <ReelFeatures/>
       </div>
     );

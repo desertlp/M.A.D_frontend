@@ -14,7 +14,9 @@ const Home = () => {
       />
 
       <div className="float">
-        <RegisterButton/>
+        <div id="register-button">
+          <RegisterButton/>
+        </div>
         {/* <h1 className="home-h1">Major Art Departments</h1> */}
         <Landing/>
       </div>

@@ -53,7 +53,7 @@ class Login extends Component {
           <input onChange={this.handleChange} type="password" id="password" name="password" value={this.state.password} />
         </div>
 
-        <button className="btn btn-primary float-right" type="submit">Login</button>
+        {/* <button className="btn btn-primary float-right" type="submit">Login</button> */}
 
         <div className="button">
           <button className="btn btn-primary float-right" type="submit"><SignIn/></button>

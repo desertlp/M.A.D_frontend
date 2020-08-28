@@ -16,8 +16,8 @@ function Video (props) {
           <img src={video.coverArtUrl} alt={video.title} height="100" />
         </section>
         <section className="content-wrapper">
-          <h4>{video.title ? video.title : ''}</h4>
-          <p>{video.artist ? video.artist : ''}</p>
+          <h4 id="video-title">{video.title ? video.title : ''}</h4>
+          <p id="video-info">{video.artist ? video.artist : ''}</p>
           {/* <p><strong>Link: </strong> {video.videoUrl ? video.videoUrl : ''}</p> */}
           <span>
           </span>
