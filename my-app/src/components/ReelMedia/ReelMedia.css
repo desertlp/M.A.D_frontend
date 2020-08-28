@@ -1,4 +1,6 @@
-* {
-    position: relative;
-    padding-top: 0;
-}
+
+.reel-padding {
+    position: absolute;
+    top: -600px;
+    z-index: -10;
+  }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// Material-UI Components 
+import EditVideoButton from '../MatUI/EditVideo';
+import DeleteVideoButton from '../MatUI/DeleteVideo';
 import './Video.css';
 
 function Video (props) {
@@ -15,8 +17,10 @@ function Video (props) {
         </section>
         <section className="content-wrapper">
           <h4>{video.title ? video.title : ''}</h4>
-          <p><strong>Artist: </strong> {video.artist ? video.artist : ''}</p>
-          <p><strong>Link: </strong> {video.videoUrl ? video.videoUrl : ''}</p>
+          <p>{video.artist ? video.artist : ''}</p>
+          {/* <p><strong>Link: </strong> {video.videoUrl ? video.videoUrl : ''}</p> */}
+          <span>
+          </span>
         </section>
       </div>
     </Link>

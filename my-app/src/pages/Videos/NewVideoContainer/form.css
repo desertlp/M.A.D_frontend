@@ -1,0 +1,52 @@
+
+
+.form-group {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+label {
+    color: black;
+    margin-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}    
+
+form {
+    position: absolute;
+    right: 400px;
+    width: 400px;
+    padding: 40px;
+    border: solid 1px lightgrey;
+    box-shadow: 5px 2px lightgrey;
+}
+
+.auth-title {
+    position: relative;
+    right: -125px;
+    padding: 5px;
+    margin: 25px;
+}
+
+.button {
+    position: relative;
+    right: -125px;
+    padding: 5px;
+    margin: 25px;
+}
+
+input {
+    position: absolute;
+    right: 100px;
+}
+
+
+button {
+    transition: 0.1 linear;
+    border: none;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

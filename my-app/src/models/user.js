@@ -23,6 +23,34 @@ class UserModel {
     })
       .then((response) => response.json())
   }
+
+
+  // static createVideo = (userId, video) => {
+  //   const url = `${url}/${userId}`;
+  //   return fetch(url, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'authorization': token,
+  //     },
+  //     body: JSON.stringify(video)
+  //   })
+  //     .then((response) => response.json())
+  // }
+  
+  static editUser = (userId) => {
+    return fetch(`${url}/${userId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': token,
+      },
+      body: JSON.stringify(userId)
+    })
+      .then((response) => response.json())
+  }
+  
+  
 }
 
 

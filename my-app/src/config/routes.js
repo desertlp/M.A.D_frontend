@@ -8,20 +8,14 @@ import Contact from '../pages/Contact/Contact';
 import Bio from '../pages/Bio/Bio';
 
 // Edit Profile
-import EditProfileContainer from '../pages/Profile/EditProfileContainer';
+import Profile from '../pages/Profile/Profile';
 
 // Videos
-import VideoListContainer from '../pages/Videos/VideoListContainer/VideoListContainer';
 import VideoContainer from '../pages/Videos/VideoContainer/VideoContainer';
 import NewVideoContainer from '../pages/Videos/NewVideoContainer/NewVideoContainer';
-// Video Index Page
+import EditVideoContainer from '../pages/Videos/EditVideoContainer/EditVideoContainer';
+import DeleteVideoContainer from '../pages/Videos/DeleteVideoContainer/DeleteVideoContainer';
 import VideoIndex from '../pages/Videos/VideoIndex';
-
-
-// BTS Photo Gallery 
-import BTSIndex from '../pages/BTS/BTSIndex';
-import BTSContainer from '../pages/BTS/BTSContainer/BTSContainer';
-import NewBTSContainer from '../pages/BTS/NewBTSContainer/NewBTSContainer';
 
 // Authorization 
 import Login from '../components/Auth/Login';
@@ -29,29 +23,23 @@ import Register from '../components/Auth/Register';
 
 
 export default ({ currentUser, setCurrentUser }) => (
-// export default ({setCurrentUser }) => (
   
   <Switch>
     
     <Route exact path='/' component={Home} />
-    
     <Route path='/reel'component={ReelContainer}/>
-    {/* <Route path='user/user:id/reel' render={() => currentUser ? <ReelContainer /> : <Redirect to='/login' /> }/> */}
-
     <Route path='/bio'component={Bio}/>
     <Route path='/contact'component={Contact}/>
     
-    <Route path='/video/new' render={() => currentUser ? <NewVideoContainer /> : <Redirect to='/login' /> }/>
-    <Route path='/video/:id' component={VideoContainer} />
-    {/* <Route path='/video' component={VideoListContainer} /> */}
-    <Route path='/video' component={VideoIndex} />
-    
-    
-    <Route path='/bts/new' render={() => currentUser ? <NewBTSContainer /> : <Redirect to='/login' /> }/>
-    <Route path='/bts/:id' component={BTSContainer} />
-    <Route path='/bts' component={BTSIndex} />
+    <Route path='/profile'component={Profile}/>
 
-    {/* <Route path='/profile/:id/edit' component={ProfileContainer} /> */}
+    <Route exact path='/video' component={VideoIndex} />
+    <Route exact path='/video/new' render={() => currentUser ? <NewVideoContainer /> : <Redirect to='/login' /> }/>
+    <Route exact path='/video/:id' component={VideoContainer} />
+    <Route path='/video/:id/edit' component={EditVideoContainer} />
+    <Route path='/video/:id/delete' component={DeleteVideoContainer} />
+   
+
 
     <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} />} />
     <Route path='/register' component={Register} />

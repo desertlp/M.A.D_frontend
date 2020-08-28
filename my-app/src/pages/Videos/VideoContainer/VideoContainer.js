@@ -1,6 +1,13 @@
 import React from 'react';
 import Video from '../../../components/Video/Video';
+import EditVideoButton from '../../../components/MatUI/EditVideo';
+import DeleteVideoButton from '../../../components/MatUI/DeleteVideo';
+
 import VideoModel from '../../../models/video';
+
+
+import './VideoContainer.css';
+import Axios from 'axios';
 
 class VideoContainer extends React.Component {
   state = {
@@ -19,8 +26,21 @@ class VideoContainer extends React.Component {
 
   render() {
     console.log(this.props);
-    return <Video video={this.state.video} list={false} />;
+    return (
+      <div className="show-video-container">
+        <a target="_blank" href={this.state.video.videoUrl}>
+          <Video video={this.state.video} list={false} />;
+        </a>
+          
+        <span className="show-video-buttons">
+          <EditVideoButton/>
+          <DeleteVideoButton/>
+        </span>
+      </div>
+    );
   }
 }
 
 export default VideoContainer;
+
+

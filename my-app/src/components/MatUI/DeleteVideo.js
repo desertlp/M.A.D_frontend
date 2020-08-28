@@ -2,17 +2,17 @@ import React from 'react';
 import { Button } from '@material-ui/core'; // using hooks
 import { Link } from 'react-router-dom';
 
-function NewBTSButton () {
+function DeleteVideoButton () {
     return (
         <div className="mat-ui-button">
             <Button 
-                component={Link} to='/bts/new'
+                component={Link} to='/video/:id/delete'
                 color='secondary'
                 variant='outlined'>
-                Add BTS Photo
+                Delete Video
             </Button>
         </div>  
     );
   }
-  export default NewBTSButton; 
+  export default DeleteVideoButton; 
 

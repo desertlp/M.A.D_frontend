@@ -1,0 +1,19 @@
+.videos-container {
+    width: 100%;
+}
+
+.video-card {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.show-video-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.show-video-buttons {
+    display: flex;
+}

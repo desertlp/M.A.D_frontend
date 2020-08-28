@@ -3,8 +3,7 @@ import React from 'react';
 import ReelFeatures from '../../components/ReelFeatures/ReelFeatures';
 import UserModel from '../../models/user';
 import ReelMedia from '../../components/ReelMedia/ReelMedia';
-
-import './Home.css';
+import './ReelContainer.css';
 
 class ReelContainer extends React.Component {
   state = {
@@ -24,16 +23,9 @@ class ReelContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="reel-container">
         <ReelMedia/>
-
-        <div className="float">
-          
-    
-          {/* <h1 className="ReelContainer-h1">Reel</h1> */}
-          <ReelFeatures featuredVideos={this.state.featuredVideos}/>
-        </div>
-  
+        <ReelFeatures/>
       </div>
     );
   }

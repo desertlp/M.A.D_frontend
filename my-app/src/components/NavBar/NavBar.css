@@ -37,7 +37,11 @@ nav .container {
   transition: 0.1 linear;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   transform: scale(1.5);
+}
+
+.nav-link.active {
+  color: #2E8F9B;
+  transform: scale(1.2);
 }

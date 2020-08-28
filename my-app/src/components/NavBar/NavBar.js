@@ -28,14 +28,6 @@ function NavBar({ currentUser, logout }) {
           </li>
 
           <li className='nav-item'>
-            <NavLink className='nav-link' exact to='/bts'>BTS</NavLink>
-          </li>
-
-          <li className='nav-item'>
-            <NavLink className='nav-link' to='/bts/new'>Add BTS</NavLink>
-          </li>
-
-          <li className='nav-item'>
             {/* Don't forget the 'exact' prop for home nav link */}
             <NavLink className='nav-link' exact to='/contact'>Contact</NavLink>
           </li>

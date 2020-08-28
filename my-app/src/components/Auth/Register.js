@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; // higher order 
 import axios from 'axios'; // npm install axios
-import { API_URL } from "../../utils/consts"
+import { API_URL } from "../../utils/consts";
+import './auth.css';
+import SignUp from '../MatUI/SignUp';
 
 class Register extends Component {
   state = {
@@ -39,6 +41,8 @@ class Register extends Component {
     // console.log(this.props);
     return (
       <form onSubmit={this.handleSubmit}>
+        
+        <h4 className="auth-title">Sign Up</h4>
 
         <div className="form-group">
           <label htmlFor="name">Email</label>
@@ -80,7 +84,12 @@ class Register extends Component {
           <input onChange={this.handleChange} type="headshotUrl" id="headshotUrl" name="headshotUrl"/>
         </div>
 
-        <button className="btn btn-primary float-right" type="submit">Register</button>
+        <div className="button">
+          <button className="btn btn-primary float-right" type="submit"><SignUp/></button>
+        </div>
+      
+
+   
       </form>
     )
   }

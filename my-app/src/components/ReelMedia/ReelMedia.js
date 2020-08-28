@@ -4,6 +4,7 @@ import './ReelMedia.css';
 
 function ReelMedia() {
     return (
+      <div className="reel-padding">
         <Player 
           config={{ file: { 
             attributes: 
@@ -12,7 +13,7 @@ function ReelMedia() {
           poster="/assets/poster.png" 
           src={require('./Reel.mov')}>
         </Player>
-
+      </div>
       );
   }
   

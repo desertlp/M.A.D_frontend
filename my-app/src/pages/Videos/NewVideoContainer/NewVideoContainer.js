@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import VideoModel from '../../../models/video';
+import './form.css';
+// import AddVideo from '../../../components/MatUI/AddVideo';
 
 class NewVideoContainer extends React.Component {
   state = {
@@ -22,12 +24,13 @@ class NewVideoContainer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    // console.log(this.state);
     VideoModel.createVideo(this.state)
       .then((result) => {
         console.log(result);
+        this.props.history.push('/video');
       });
       // Redirect To Video Index (history comes from react-router-dom)
-    this.props.history.push('/video');
   }
 
   render() {
@@ -35,35 +38,37 @@ class NewVideoContainer extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
 
-          <h2>Add A New Video</h2>
+          <h4 className="auth-title">Add A New Video</h4>
 
-          <div>
-            <label htmlFor="">Title</label>
+          <div className="form-group">
+            <label htmlFor="">Song Title</label>
             <input onInput={this.handleChange} type="text" name="title" />
           </div>
 
-          <div>
+          <div className="form-group">
             <label htmlFor="">Artist</label>
             <input onInput={this.handleChange} type="text" name="artist" />
           
           </div>
           
-          <div>
+          <div className="form-group">
             <label htmlFor="">Cover Art</label>
             <input onInput={this.handleChange} type="text" name="coverArtUrl" />
           </div>
           
-          <div>
+          <div className="form-group">
             <label htmlFor="">Video Url</label>
             <input onInput={this.handleChange} type="text" name="videoUrl" />
           </div>
           
-          <div>
+          {/* <div className="form-group">
             <label htmlFor="">Featured</label>
             <input onInput={this.handleChange} type="checkbox" name="featured" />
-          </div>
+          </div> */}
 
-          <button type="submit">Add Video</button>
+          <div className="button">
+            <button type="submit">Add Video</button>
+          </div>
 
         </form>
       </div>

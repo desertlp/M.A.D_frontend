@@ -12,7 +12,9 @@ const VideoIndex = () => {
             <div className="video-index-card">
                 <VideoListContainer/>
             </div>
-            <NewVideoButton/>
+        <div className="add-video-button">
+          <NewVideoButton/>
+        </div>
         </div>
     </div>
   );
